@@ -32,6 +32,8 @@ jobs:
         env:
           ANDROID_NDK_HOME: ${{ steps.ndk.outputs.ndk-path }}
         run: |
+          go get golang.org/x/mobile@latest
+          go mod tidy
           go install golang.org/x/mobile/cmd/gomobile@latest
           go install golang.org/x/mobile/cmd/gobind@latest
           export PATH=$(go env GOPATH)/bin:$PATH
