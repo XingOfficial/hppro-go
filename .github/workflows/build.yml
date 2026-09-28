@@ -42,7 +42,6 @@ jobs:
 
       - name: Build APK
         run: |
-          cd app
           chmod +x gradlew
           ./gradlew assembleRelease --no-daemon
 
@@ -50,4 +49,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: HP-Pro-release
-          path: app/app/build/outputs/apk/release/app-release.apk
+          path: app/build/outputs/apk/release/app-release.apk
