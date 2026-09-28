@@ -37,6 +37,7 @@ jobs:
           go install golang.org/x/mobile/cmd/gobind@latest
           export PATH=$(go env GOPATH)/bin:$PATH
           gomobile init
+          mkdir -p app/libs
           gomobile bind -androidapi 26 -target=android -o app/libs/hpclient.aar .
 
       - name: Build APK
