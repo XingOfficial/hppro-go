@@ -1,0 +1,3 @@
+-keep class hpclient.** { *; }
+-keep class go.** { *; }
+-keep class gomobile.** { *; }
